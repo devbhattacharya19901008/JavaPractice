@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;
+import java.util.stream.Stream;
 
 public class LearnLambda {
 
@@ -40,7 +41,9 @@ public class LearnLambda {
 
         System.out.println(addValue + "  " + subtractValue);
 
-
+        Integer[] arr = new Integer[]{1,2,3};
+        Stream.of(arr)
+                .forEach(n -> learnLambda.display(n));
     }
 
     void display(Integer n){
